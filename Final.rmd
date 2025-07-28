@@ -18,8 +18,8 @@ FinalDat <-read.csv(file="finalSumr2024.csv",header=TRUE)
 FinalData <- FinalDat  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor)) 
-males = filter(FinalData, sex =="males")
-females = filter(FinalData, sex =="females")
+males = filter(FinalData, sex =="M")
+females = filter(FinalData, sex =="F")
 gay = filter(FinalData, LGBTQ =="gay")
 Druguser = filter(FinalData, DrugUser =="yes")
 ```
@@ -33,7 +33,7 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 ###Barplot
 
 ```{r}
-dd2 <- male %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+dd2 <- males %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
 basicC + geom_bar(stat="identity",position="dodge")
 
