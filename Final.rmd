@@ -41,6 +41,15 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
+### Numerical results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data= males)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
 ## Females
 
 
