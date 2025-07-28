@@ -83,16 +83,16 @@ print(effectivenessmales)
 ```
 
 
+```{r}
+low=(malesfish$conf.int[1]/(malesfish$conf.int[1] +1))*100
+hi=(malesfish$conf.int[2]/(malesfish$conf.int[2] +1))*100
+options(digits=2)
+```
 
+## Effectiveness Confidence Interval `r low`  to `r hi`
 
-
-
-
-
-
-
-
-
+Above is the effectiveness for the covid-19 vaccine for males. If the effectiveness is above 50% that means that the vaccine is effective. Based on the interval seen above, we cn conclude that the vaccine is ineffective in protecting guys from getting covid-19. 
+The odds ratio is approximately how effective the vaccine is. The odds ratio for the guys can be seen above as 70. The effectiveness confidence interval for the guys is 68.84 to 78.32.
 
 ## Females
 
