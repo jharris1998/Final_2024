@@ -26,7 +26,7 @@ Druguser = filter(FinalData, DrugUser =="yes")
 
 # Introduction
 
-A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+A new  preventative vaccine (covid19) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
 ## Males
 
@@ -40,6 +40,18 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
+
+This plot represents the population of guys(males) people and the relationship to the contraction of covid-19 by either talking the vaccine or the placebo. 
+
+
+The plot above shows that a shocking 58% of the people that took the vaccine did in fact get covid-19, while only approximately 42% of the people taking the placebo contracted covid-19.  A substantially higher percentage of people who took that vaccine contracted covid-19 versus those who were only given the placebo. The vaccine appears to be ineffective in protection against covid-19. The odds of getting covid-19 while taking the vaccine is 3:2. The men that took the drug were one and half times more likely to get covid-19 than those taking the placebo.
+
+
+There are two plots. In first plot,the x-axis represents infected, whether the participants were infected with covid-19 or they were not. The y-axis represents the count, or number of people that got covid-19 or not.
+In the second plot, the one above, The The left two bars of the graph are all the people that got covid-19. The x-axis represents whether a person got covid-19 or not. The y-axis, however, instead of representing the number of people who got covid-19, now represents the percentage of people that got covid-19 after taking the the placebo or taking the Vaccine. 
+
+
+The codes that  create this plot start with the code block beginning with dd2. dd2 can be seen in the environment pane and if inspected contains 4 variables.These variables include infected, treatment, count, and prcent(stands for percent). The second group of codes is called the basicC. BasicC can also be seen in the environment pane and appears to contain a list of 9 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot.
 
 ### Numerical results
 
