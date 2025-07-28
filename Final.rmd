@@ -33,7 +33,7 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 ###Barplot
 
 ```{r}
-dd2 <- males %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+dd2 <- male %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
 basicC + geom_bar(stat="identity",position="dodge")
 
