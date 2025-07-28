@@ -65,6 +65,29 @@ These numerical results show specific percentages of males that got covid-19 aft
 Among the guys, 26.20% got covid-19 after taking the vaccine, while the approximately 73.80% of guys that were given the placebo contracted covid-19. The vaccine is clearly not effective in preventing covid-19 in males and it is not recommended. Those who took the placebo were much less likely to contact covid-19
 The odds of getting covid-19 while taking the vaccine is 3:2. The men that took the drug were one and half times more likely to get covid-19 than those taking the placebo.
 
+#Inferential
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+malesfish <- fisher.test(table1)
+malesfish
+```
+
+The information to play close attention to among all of these results is the output of the Fisher's Exact test. The p-value displayed above is extremely small at 0. This is an awfully small number. seeing this number means that these results are not likely to occur by chance.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Females
 
