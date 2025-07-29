@@ -161,6 +161,16 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 This plot represents the population of gay people and the relationship to the contraction of covid-19 by taking either the vaccine or the placebo. In this barplot, it appears that a 71% who has the vaccine got covid-19 as well as the 29% who received the placebo. The odds of getting covid-19 while taking the vaccine is 2.5:1. The individuals who identified as LGBTQ and took the vaccine were three times as likely to get covid-19 than those taking the placebo. There are two plots. In first plot,the x-axis represents infected, whether the participants were infected with covid-19 or they were not. The y-axis represents the count, or number of people that got covid-19 or not. In the second plot, the left two bars of the graph are all the people that got covid-19. The x-axis represents whether a person got covid-19 or not. The y-axis, however, instead of representing the number of people who got covid-19, now represents the percentage of people that got covid-19 after taking the the placebo or taking the Vaccine. 
 
+### Numerical results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data=gay)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
+
 ## Druggies
 
 
