@@ -120,6 +120,17 @@ These numerical results show specific percentages of females that got covid-19 a
 The females that took the vaccine ans contracted covid-19 was 35%, just as approximated in the plots prior. The gals that took the placebo and got covid-19 was 65%. The vaccine is in fact effective in protecting females against the contraction of covid-19. 
 The odds of getting covid-19 while taking the vaccine is 1:4 for females. The females that took the vaccine were half as likely to get covid-19 than those taking the placebo.
 
+### Inferential 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+femalesfish <- fisher.test(table1)
+femalesfish
+```
+
+The information to play close attention to among all of these results is the output of the Fisher's Exact test. The p-value displayed above is  small at 2e-08 . Seeing this number means that these results are likely to occur by chance and so the null hypothesis can be rejected in favor of the alternative.
+The Fishers's Exact Test illustrates that the odds ratio is just under 2 at 1.9. Females who got the drug were about 95% chance to get covid-19 than women that only took the placebo.
+
 
 ## LGBTQ
 
