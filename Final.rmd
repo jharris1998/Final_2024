@@ -131,6 +131,21 @@ femalesfish
 The information to play close attention to among all of these results is the output of the Fisher's Exact test. The p-value displayed above is  small at 2e-08 . Seeing this number means that these results are likely to occur by chance and so the null hypothesis can be rejected in favor of the alternative.
 The Fishers's Exact Test illustrates that the odds ratio is just under 2 at 1.9. Females who got the drug were about 95% chance to get covid-19 than women that only took the placebo.
 
+```{r}
+effect <- femalesfish$p.value/(femalesfish$p.value +1)
+effectivenessfemales = femalesfish$estimate/(femalesfish$estimate +1)*100
+print(effectivenessfemales)
+```
+
+```{r}
+low=(femalesfish$conf.int[1]/(femalesfish$conf.int[1] +1))*100
+hi=(femalesfish$conf.int[2]/(femalesfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
+
 
 ## LGBTQ
 
