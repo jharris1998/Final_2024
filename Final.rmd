@@ -218,5 +218,14 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 This plot represents the population of people who answered  Druguser to drug use and the relationship to the contraction of covid-19 while taking either the vaccine or the placebo. This barplot shows that around 80% of the people who answered yes to drug use and recieved the vaccine contracted covid-19. This means that around 15% of the drugusers that only took the placebo ended up getting covid-19.The odds of getting covid-19 while taking the vaccine is 1:2. The drugusers that took the vaccine were half as likely to get covid-19 than those taking the placebo. There are two plots. In first plot,the x-axis represents infected, whether the participants were infected with covid-19 or they were not. The y-axis represents the count, or number of people that got covid-19 or not. In the second plot, the left two bars of the graph are all the people that got covid-19. The x-axis represents whether a person got covid-19 or not. The y-axis, however, instead of representing the number of people who got covid-19, now represents the percentage of people that got covid-19 after taking the the placebo or taking the Vaccine. The codes that  create this plot start with the code block beginning with dd2, dd2 can be seen in the environment pane and contains 4 variables.These variables include infected, treatment, count, and prcent(stands for percent). The second group of codes is called the basicC and can be seen in the environment pane and appears to contain a list of 11 variables. This information creates the first plot. The basicCC is the last bunch of codes and is also in the files pane. It also contains 9 variables and helps to create the percentage plot, the second plot.
 
+### Numerical results
+
+```{r}
+table1 <- xtabs(~infected + treatment, data= Druguser)
+rowPerc(table1)
+colPerc(table1)
+```
+
+
 
 # Overall Results and Conclusions
