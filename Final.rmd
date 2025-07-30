@@ -200,7 +200,7 @@ options(digits=2)
 
 ## Effectiveness Confidence Interval `r low`  to `r hi`
 
-Above is the effectiveness for the covid-19 for those who identified as LGBTQ.  If the effectiveness is above 50% that means that the vaccine is effective. We can conclude that the vaccine is ineffective in protecting people who identify as LGBTQ from getting covid-19. The odds ratio is approximately how effective the vaccine is. The odds ratio for the LGBTQ be seen above as 29. This is completely ineffective. The people who take the vaccine are not better off then those who don't receive it at all. The effectiveness confidence interval for the people who identified as is 20.51 to 37.97.
+Above is the effectiveness for the covid-19 for those who identified as LGBTQ.  If the effectiveness is above 50% that means that the vaccine is effective. We can conclude that the vaccine is ineffective in protecting people who identify as LGBTQ from getting covid-19. The odds ratio is approximately how effective the vaccine is. The odds ratio for the LGBTQ be seen above as 81. This is completely ineffective. The people who take the vaccine are not better off then those who don't receive it at all. The effectiveness confidence interval for the people who identified as LGBTQ is 68.99 to 89.87.
 
 
 
