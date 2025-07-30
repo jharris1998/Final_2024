@@ -240,7 +240,17 @@ druguserfish
 The p-value is 1e-10. This is a extremely small number and with that being said, the conclusion is that these results are unlikely to occur by chance. The Fishers's Exact Test illustrates that the odds ratio is  0.087. 
 Drug users who got the vaccine were about half as likely to get Covid-19 than drug users that took the placebo. The null hypothesis is rejected in favor the the alternative. The drug is  effective in preventing the chances of getting covid-19 in drugusers.
 
+```{r}
+effect <- druguserfish$p.value/(druguserfish$p.value +1)
+effectivenessdruguser = druguserfish$estimate/(druguserfish$estimate +1)*100
+print(effectivenessdruguser)
+```
 
+```{r}
+low=(druguserfish$conf.int[1]/(druguserfish$conf.int[1] +1))*100
+hi=(druguserfish$conf.int[2]/(druguserfish$conf.int[2] +1))*100
+options(digits=2)
+```
 
 
 
