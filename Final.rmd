@@ -113,12 +113,12 @@ This plot represents the population of females people and the relationship to th
 ```{r}
 table1 <- xtabs(~infected + treatment, data=females)
 rowPerc(table1)
-=colPerc(table1)
+colPerc(table1)
 ```
 
 These numerical results show specific percentages of females that got covid-19 after taking the placebo and taking the vaccine. 
-The females that took the vaccine ans contracted covid-19 was 35%, just as approximated in the plots prior. The gals that took the placebo and got covid-19 was 65%. The vaccine is in fact effective in protecting females against the contraction of covid-19. 
-The odds of getting covid-19 while taking the vaccine is 1:4 for females. The females that took the vaccine were half as likely to get covid-19 than those taking the placebo.
+The females that took the vaccine ans contracted covid-19 was 35%, just as approximated in the plots prior. The females that took the placebo and got covid-19 was 50%. The vaccine is in fact effective in protecting females against the contraction of covid-19. 
+The odds of getting covid-19 while taking the vaccine is 1:4 for females. The females that took the vaccine were half as likely to get covid-19 than those taking the placebo at 2:6.
 
 ### Inferential 
 ```{r}
@@ -168,6 +168,39 @@ table1 <- xtabs(~infected + treatment, data=gay)
 rowPerc(table1)
 colPerc(table1)
 ```
+
+### Inferential 
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+gaysfish <- fisher.test(table1)
+gaysfish
+```
+
+
+The p-value is 6e-06. This in an incredibly small number and with that being said, the conclusion is that these results are unlikely to occur by chance.
+
+The Fishers's Exact Test illustrates that the odds ratio is 0.4
+Gay individuals who got the vaccine were about 2.5 times more likely to get Covid-19 than gays that took the placebo.
+
+The null hypothesis is rejected in favor the the alternative. The drug is completely ineffective in preventing the chances of getting covid-19 in individuals who identify as gay.
+
+```{r}
+effect <- gaysfish$p.value/(gaysfish$p.value +1)
+effectivenessgays = gaysfish$estimate/(gaysfish$estimate +1)*100
+print(effectivenessgays)
+```
+
+```{r}
+low=(gaysfish$conf.int[1]/(gaysfish$conf.int[1] +1))*100
+hi=(gaysfish$conf.int[2]/(gaysfish$conf.int[2] +1))*100
+options(digits=2)
+```
+
+## Effectiveness Confidence Interval `r low`  to `r hi`
+
+Above is the effectiveness for the covid-19 for those who identified as LGBTQ.  If the effectiveness is above 50% that means that the vaccine is effective. We can conclude that the vaccine is ineffective in protecting people who identify as LGBTQ from getting covid-19. The odds ratio is approximately how effective the vaccine is. The odds ratio for the LGBTQ be seen above as 29. This is completely ineffective. The people who take the vaccine are not better off then those who don't receive it at all. The effectiveness confidence interval for the people who identified as is 20.51 to 37.97.
 
 
 
