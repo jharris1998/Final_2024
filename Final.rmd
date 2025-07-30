@@ -226,6 +226,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+These numerical results show specific percentages of drugusers that got covid-19 after taking the placebo and taking the vaccine. The percentage of drug users that took the vaccine and contacted covid-19 is 33% Those that were only given the placebo and got covid-19 was almost 51%. It is clear that the vaccine to prevent covid-19 is effective in protecting drug users against covid-19 and  so getting this vaccine is recommended. The odds of getting covid-19 while taking the vaccine is 3:6. The drugusers that took the vaccine were half as likely to get covid-19 than those taking the placebo.
+
 
 
 # Overall Results and Conclusions
